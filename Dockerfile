@@ -21,7 +21,7 @@ RUN apk --update add --virtual build-dependencies python2 python3 build-base && 
 	apk --update add git && \
 	apk del build-dependencies
 
-RUN N8N_CORE_BRANCH=feature/n8n-2677-individual-workflow-template-page-ui && \
+RUN N8N_CORE_BRANCH=feature/n8n-2853-templates-fe-all-pages-ready && \
     git clone https://github.com/n8n-io/n8n && \
 	cd n8n && \
     echo $N8N_CORE_BRANCH && \
