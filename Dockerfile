@@ -21,7 +21,7 @@ RUN apk --update add --virtual build-dependencies python2 python3 build-base && 
 	apk --update add git && \
 	apk del build-dependencies
 
-RUN N8N_CORE_BRANCH=feature/n8n-2853-templates-fe-all-pages-ready && \
+RUN N8N_CORE_BRANCH=n8n-2954-use-env-variables-on-fe-to-customize && \
     git clone https://github.com/n8n-io/n8n && \
 	cd n8n && \
     echo $N8N_CORE_BRANCH && \
