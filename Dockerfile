@@ -28,9 +28,8 @@ RUN N8N_CORE_BRANCH=templates/bugfixing && \
     git fetch origin $N8N_CORE_BRANCH && \
     git checkout $N8N_CORE_BRANCH && \
 	npm install -g typescript && \
-	npm install -g lerna
-
-RUN lerna bootstrap --hoist
+	npm install -g lerna && \
+    lerna bootstrap --hoist
 
 RUN npm_config_user=root npm run build 
 
