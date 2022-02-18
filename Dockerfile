@@ -28,10 +28,11 @@ RUN N8N_CORE_BRANCH=templates/bugfixing && \
     git fetch origin $N8N_CORE_BRANCH && \
     git checkout $N8N_CORE_BRANCH && \
 	npm install -g typescript && \
-	npm install -g lerna && \
-	npm install && \
-	lerna bootstrap --hoist && \
-	npm_config_user=root npm run build 
+	npm install -g lerna
+
+RUN lerna bootstrap --hoist
+
+RUN npm_config_user=root npm run build 
 
 # Specifying work directory
 WORKDIR /data
