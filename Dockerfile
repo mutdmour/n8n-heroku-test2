@@ -31,10 +31,10 @@ RUN N8N_CORE_BRANCH=templates/bugfixing && \
 	npm install -g lerna && \
     lerna bootstrap --hoist
 
-RUN npm_config_user=root npm run build 
-
 # Specifying work directory
 WORKDIR /data
+
+RUN npm_config_user=root npm run build 
 
 # copy start script to container
 COPY ./start.sh /
